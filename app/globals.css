@@ -1,0 +1,32 @@
+/* Import Tailwind CSS directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the Detective Terminal theme */
+@layer base {
+  /* Set the body background to the terminal theme */
+  body {
+    @apply bg-terminal-bg text-terminal-text;
+  }
+}
+
+@layer components {
+  /* Custom scrollbar styling for the terminal look */
+  .terminal-scrollbar::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-track {
+    background: #0a0e0a;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb {
+    background: #00cc33;
+    border-radius: 4px;
+  }
+
+  .terminal-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #00ff41;
+  }
+}
